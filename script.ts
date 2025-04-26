@@ -25,7 +25,6 @@ play(boca, river);
 
 let array = [1, 2, 3, 4, 5];
 let arrayTs: number[] = [1, 2, 3, 4, 5];
-
 // console.log(array);
 // console.log(arrayTs);
 
@@ -36,7 +35,6 @@ let person = {
     age: 21,
     eatsMeat: true
 }
-
 // console.log(person);
 
 person = {
@@ -44,7 +42,6 @@ person = {
     age: 101,
     eatsMeat: true
 }
-
 // console.log(person);
 
 // Types playground
@@ -66,5 +63,27 @@ let personType2: PersonType = {
     name: "Stewie",
     age: 2,
 }
+// console.log(personType, personType2);
 
-console.log(personType, personType2);
+// Interface playground
+
+interface PersonI {
+    name: string,
+    age: number,
+    isVegan?: boolean
+}
+
+let personI: PersonI = {
+    name: "Robert",
+    age: 50,
+    isVegan: false
+}
+let personI2: PersonI = {
+    name: "Stewie",
+    age: 2,
+}
+
+function personName(person: PersonI) {
+    console.log(`The person name is ${person.name}`)
+}
+personName(personI);

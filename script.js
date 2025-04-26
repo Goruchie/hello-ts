@@ -44,4 +44,16 @@ let personType2 = {
     name: "Stewie",
     age: 2,
 };
-console.log(personType, personType2);
+let personI = {
+    name: "Robert",
+    age: 50,
+    isVegan: false
+};
+let personI2 = {
+    name: "Stewie",
+    age: 2,
+};
+function personName(person) {
+    console.log(`The person name is ${person.name}`);
+}
+personName(personI);
