@@ -47,4 +47,24 @@ person = {
 
 // console.log(person);
 
+// Types playground
 
+// Declaring a Type
+type PersonType = {
+    name: string,
+    age: number,
+    isVegan?: boolean
+}
+
+// Declaring a object based in the type
+let personType: PersonType = {
+    name: "Robert",
+    age: 50,
+    isVegan: false
+}
+let personType2: PersonType = {
+    name: "Stewie",
+    age: 2,
+}
+
+console.log(personType, personType2);

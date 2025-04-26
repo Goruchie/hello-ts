@@ -34,4 +34,14 @@ person = {
     age: 101,
     eatsMeat: true
 };
-// console.log(person);
+// Declaring a object based in the type
+let personType = {
+    name: "Robert",
+    age: 50,
+    isVegan: false
+};
+let personType2 = {
+    name: "Stewie",
+    age: 2,
+};
+console.log(personType, personType2);
