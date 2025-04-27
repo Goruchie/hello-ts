@@ -87,3 +87,37 @@ function personName(person: PersonI) {
     console.log(`The person name is ${person.name}`)
 }
 personName(personI);
+
+// OOP
+class Persona {
+    constructor(name: string, age?: number) {
+        this.name = name;
+        this.age = age;
+    }
+    name?: string;
+    age?: number;
+  }
+  
+  const persona = new Persona("Marcos");
+  console.log(persona); 
+   
+// Encapsulation
+
+class Lottery<T> {
+    private ticket?: T;
+    constructor(private name: string){}
+    
+    setTicket(ticket: T){
+        this.ticket = ticket;
+    }
+    getTicket(){
+        return this.ticket;
+    }
+    public raffle(): string{
+        return `The person called ${this.name}, has the ${this.ticket} ticket.`;
+    }
+}
+
+let lottery: Lottery<number> = new Lottery("Olaf");
+lottery.setTicket(8);
+console.log(lottery.raffle());

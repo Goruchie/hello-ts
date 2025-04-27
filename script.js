@@ -57,3 +57,30 @@ function personName(person) {
     console.log(`The person name is ${person.name}`);
 }
 personName(personI);
+// OOP
+class Persona {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+const persona = new Persona("Marcos");
+console.log(persona);
+// Encapsulation
+class Lottery {
+    constructor(name) {
+        this.name = name;
+    }
+    setTicket(ticket) {
+        this.ticket = ticket;
+    }
+    getTicket() {
+        return this.ticket;
+    }
+    raffle() {
+        return `The person called ${this.name}, has the ${this.ticket} ticket.`;
+    }
+}
+let lottery = new Lottery("Olaf");
+lottery.setTicket(8);
+console.log(lottery.raffle());
